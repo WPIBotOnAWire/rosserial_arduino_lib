@@ -57,6 +57,9 @@ namespace ros
 
   typedef NodeHandle_<ArduinoHardware, 10, 10, 2048, 2048> NodeHandle;
 
+#elif defined(_SAMD21_)    
+    typedef NodeHandle_<ArduinoHardware, 16, 16, 1024, 1024> NodeHandle;
+
 #else
 
   typedef NodeHandle_<ArduinoHardware> NodeHandle; // default 25, 25, 512, 512
